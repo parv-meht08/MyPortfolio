@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 330px;
-  height: 490px;
+  height: 300px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
@@ -20,13 +20,13 @@ const Card = styled.div`
     filter: brightness(1.1);
   }
 `;
-const Image = styled.img`
-  width: 100%;
-  height: 180px;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
-`;
+// const Image = styled.img`
+//   width: 100%;
+//   height: 180px;
+//   background-color: ${({ theme }) => theme.white};
+//   border-radius: 10px;
+//   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+// `;
 const Tags = styled.div`
   width: 100%;
   display: flex;
@@ -98,7 +98,6 @@ const Button = styled.a`
 const ProjectCard = ({ project }) => {
   return (
     <Card>
-      <Image src={project.image} />
       <Tags></Tags>
       <Details>
         <Title>{project.title}</Title>
@@ -116,6 +115,5 @@ const ProjectCard = ({ project }) => {
     </Card>
   );
 };
-
 
 export default ProjectCard;

@@ -7,7 +7,11 @@ import { MeshStandardMaterial, Mesh, SphereGeometry } from "three";
 const PlaceholderEarth = () => (
   <Mesh>
     <SphereGeometry args={[1, 32, 32]} />
-    <MeshStandardMaterial color="lightgreen" emissive="white" emissiveIntensity={0.5} />
+    <MeshStandardMaterial
+      color="lightgreen"
+      emissive="white"
+      emissiveIntensity={0.5}
+    />
   </Mesh>
 );
 
@@ -28,13 +32,20 @@ const Earth = () => {
     if (child.isMesh) {
       child.material = new MeshStandardMaterial({
         color: "lightgreen", // Base color
-        emissive: "white",   // Emissive color to give a glowing white effect
+        emissive: "white", // Emissive color to give a glowing white effect
         emissiveIntensity: 0.5, // Adjust the intensity of the white glow
       });
     }
   });
 
-  return <primitive object={scene} scale={3} position={[0, 0, 0]} rotation={[0, 0, 0]} />;
+  return (
+    <primitive
+      object={scene}
+      scale={3}
+      position={[0, 0, 0]}
+      rotation={[0, 0, 0]}
+    />
+  );
 };
 
 const EarthCanvas = () => {

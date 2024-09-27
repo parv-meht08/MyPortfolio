@@ -1,14 +1,12 @@
 export const Bio = {
   name: "Parv Mehta",
-  roles: [
-    "Full Stack Developer",
-    "Programmer",
-  ],
+  roles: ["Full Stack Developer", "Programmer"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/parv-meht08",
-  resume:
-    "https://drive.google.com/file/d/1peXNaOuXSCbHcmUDEDIEwIak2FDZu-yP/view?usp=drive_link",
+  // resume:
+  //   "https://drive.google.com/file/d/1M-UXXyUWluhArwyu71WapFrp__iJGHz7/view?usp=drive_link",
+  // Go to HeroSection for update resume
   linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
   twitter: "https://x.com/i/flow/login?redirect_after_login=%2FParvMehta1008",
   insta: "https://www.instagram.com/parv_mehta10/",
@@ -81,7 +79,7 @@ export const skills = [
         name: "MongoDB",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-      }
+      },
     ],
   },
   {
@@ -119,21 +117,14 @@ export const skills = [
 export const experience = [
   {
     id: 0,
-    img: "https://scontent.fstv8-1.fna.fbcdn.net/v/t39.30808-1/333409172_176906565070724_4585014074054275508_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=6umnvh8bg9gQ7kNvgGXZgCQ&_nc_ht=scontent.fstv8-1.fna&oh=00_AYCzcjLRMTdtkmiUmXVIgOJ5WqJKIqinUV5SXNtAzjTUqg&oe=66D0A6AB",
+    img: "https://scontent.famd1-2.fna.fbcdn.net/v/t39.30808-6/333409172_176906565070724_4585014074054275508_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=kiovXtFj5RAQ7kNvgFEqG8X&_nc_ht=scontent.famd1-2.fna&_nc_gid=AcTcLL_8oAc6PRgkyX0WTLX&oh=00_AYD3ledbv9Hn0JysJ9Y2XdLzE7EqfV45TrJooQMZUkD5FA&oe=66FCB82D",
     role: "React Js Intern",
     company: "Sparks to Ideas",
     date: "May 2024 - June 2024",
     desc: "My internship journey at Sparks To Ideas was a transformative experience, where I delved into React JS technology for the first time. Working on the frontend for an event management site, I honed my skills with Vite and contributed significantly to the project. The hands-on experience not only enhanced your technical abilities but also gave me a deeper understanding of real-world software development, setting a solid foundation for your future career in software engineering.",
-    skills: [
-      "ReactJS",
-      "NodeJs",
-      "Material UI",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
+    skills: ["ReactJS", "NodeJs", "Material UI", "HTML", "CSS", "JavaScript"],
     doc: "https://media.licdn.com/dms/image/v2/D4D2DAQHHXGfCFMe2hw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1723558187174?e=1725174000&v=beta&t=nKleegYW7C_DA9BcDz_-zLf3ifNLd1pHSo1NyVqmkEs",
-  }
+  },
 ];
 
 export const education = [
@@ -173,8 +164,7 @@ export const projects = [
     date: "July 2024 - Aug 2024",
     description:
       "Developed a comprehensive food delivery application using React for the frontend and Node.js with Mongoose for the backend. Implemented key features such as a dynamic shopping cart, persistent state across page reloads, and integrated Stripe for secure payment processing. Designed and styled the user interface to ensure a responsive and engaging user experience, while also creating robust backend functionalities for order verification and status management.",
-      image:
-      "https://private-user-images.githubusercontent.com/174143861/363414736-bda658c2-0f68-49b8-9f76-cbb801919782.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUxMDkyNTksIm5iZiI6MTcyNTEwODk1OSwicGF0aCI6Ii8xNzQxNDM4NjEvMzYzNDE0NzM2LWJkYTY1OGMyLTBmNjgtNDliOC05Zjc2LWNiYjgwMTkxOTc4Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMVQxMjU1NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NTM5MjcyYTk4ZWQyM2U4YmRmOGY5YWZlMjY1NDUwYmY1MTFlZDQwZWE1ODQ3ZjdlMTFlOGRiZTI3ZjgzYTNmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.BM4LdZQlcuayuwXQSCryrkc2mjub6BxCwYICsargdiQ",
+    // image: "https://onedrive.live.com/?cid=C88F0C9038F07337&id=C88F0C9038F07337%21s654791c197a340d89920cd8915c2fc8b&parId=C88F0C9038F07337%21sfcafa9a7961d4e7fa0c6c1ac16cbc024&o=OneUp",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Stripe"],
     category: "web app",
     github: "https://github.com/parv-meht08/Food-Delivery-App",
@@ -200,15 +190,9 @@ export const projects = [
     date: "June 2024 - July 2024",
     description:
       "Built with React.js, Node.js, and MongoDB, NewsApp delivers up-to-date news content by leveraging an external API. This full-stack application fetches and displays news articles across various categories, ensuring users stay informed with the latest headlines. The app incorporates a responsive design for optimal viewing on multiple devices and implements efficient data handling and storage techniques to ensure fast and reliable performance.",
-    image:
-    "https://private-user-images.githubusercontent.com/174143861/363415017-a7224202-187a-4405-9150-e28a2e370a1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUxMDk1ODMsIm5iZiI6MTcyNTEwOTI4MywicGF0aCI6Ii8xNzQxNDM4NjEvMzYzNDE1MDE3LWE3MjI0MjAyLTE4N2EtNDQwNS05MTUwLWUyOGEyZTM3MGExYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMVQxMzAxMjNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMTM1OTU2NzVjMWE3ZTIyYTllNTlkMzZjMDZmZDQwNjkxMjJlODgzYWU3ODEzNTBiM2UyZDQ1MDg1ZmI2YTFhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.uNNmEFa0UIXPB2gXd8orO9frcYOojBh9AoWLqMBNAhM",
-    tags: [
-      "React Js",
-      "HTML",
-      "CSS",
-      "JAVASCRIPT",
-      "BOOTSTREP"
-    ],
+    // image:
+    // "https://private-user-images.githubusercontent.com/174143861/363415017-a7224202-187a-4405-9150-e28a2e370a1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUxMDk1ODMsIm5iZiI6MTcyNTEwOTI4MywicGF0aCI6Ii8xNzQxNDM4NjEvMzYzNDE1MDE3LWE3MjI0MjAyLTE4N2EtNDQwNS05MTUwLWUyOGEyZTM3MGExYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMVQxMzAxMjNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMTM1OTU2NzVjMWE3ZTIyYTllNTlkMzZjMDZmZDQwNjkxMjJlODgzYWU3ODEzNTBiM2UyZDQ1MDg1ZmI2YTFhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.uNNmEFa0UIXPB2gXd8orO9frcYOojBh9AoWLqMBNAhM",
+    tags: ["React Js", "HTML", "CSS", "JAVASCRIPT", "BOOTSTREP"],
     category: "web app",
     github: "https://github.com/parv-meht08/NewsApp",
     // webapp: "https://vexa-app.netlify.app/",
@@ -217,15 +201,10 @@ export const projects = [
     id: 2,
     title: "Chess Game",
     date: "Septmember 2024 - June 2024",
-    description: "Developed a real-time multiplayer Chess game using Node.js, Socket.io, JavaScript, HTML, and CSS, enabling seamless communication and interaction between two players. Implemented socket-based event handling for moves, game state synchronization, and player turns, along with check/checkmate detection. Designed a responsive user interface for smooth gameplay, optimizing the experience for real-time updates. This project enhanced my skills in WebSocket communication, multiplayer game logic, and full-stack development.",
+    description:
+      "Developed a real-time multiplayer Chess game using Node.js, Socket.io, JavaScript, HTML, and CSS, enabling seamless communication and interaction between two players. Implemented socket-based event handling for moves, game state synchronization, and player turns, along with check/checkmate detection. Designed a responsive user interface for smooth gameplay, optimizing the experience for real-time updates. This project enhanced my skills in WebSocket communication, multiplayer game logic, and full-stack development.",
     image: "",
-    tags: [
-      "Node Js",
-      "Socket.io",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
+    tags: ["Node Js", "Socket.io", "JavaScript", "HTML", "CSS"],
     category: "web app",
     github: "https://github.com/parv-meht08/Chess-Game",
     // webapp: "https://chess-game-parv.herokuapp.com/",
@@ -236,6 +215,5 @@ export const projects = [
     //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
     //     github: "https://github.com/parv-meht08",
     //   },
-
-  }
+  },
 ];
