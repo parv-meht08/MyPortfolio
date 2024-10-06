@@ -117,7 +117,7 @@ export const skills = [
 export const experience = [
   {
     id: 0,
-    img: "https://scontent.famd1-2.fna.fbcdn.net/v/t39.30808-6/333409172_176906565070724_4585014074054275508_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=kiovXtFj5RAQ7kNvgFEqG8X&_nc_ht=scontent.famd1-2.fna&_nc_gid=AcTcLL_8oAc6PRgkyX0WTLX&oh=00_AYD3ledbv9Hn0JysJ9Y2XdLzE7EqfV45TrJooQMZUkD5FA&oe=66FCB82D",
+    img: "https://media.licdn.com/dms/image/v2/C4E0BAQHtYmHxUs9B_g/company-logo_200_200/company-logo_200_200/0/1630616931234/sparks_to_ideas_logo?e=1736380800&v=beta&t=o1NEMpyF6x8Js9Lat0Yf5ZsyBWYpURc5h6TygMW4RDA",
     role: "React Js Intern",
     company: "Sparks to Ideas",
     date: "May 2024 - June 2024",
@@ -200,7 +200,7 @@ export const projects = [
   {
     id: 2,
     title: "Chess Game",
-    date: "Septmember 2024 - June 2024",
+    date: "Septmember 2024 - Septmember 2024",
     description:
       "Developed a real-time multiplayer Chess game using Node.js, Socket.io, JavaScript, HTML, and CSS, enabling seamless communication and interaction between two players. Implemented socket-based event handling for moves, game state synchronization, and player turns, along with check/checkmate detection. Designed a responsive user interface for smooth gameplay, optimizing the experience for real-time updates. This project enhanced my skills in WebSocket communication, multiplayer game logic, and full-stack development.",
     image: "",
@@ -208,6 +208,24 @@ export const projects = [
     category: "web app",
     github: "https://github.com/parv-meht08/Chess-Game",
     // webapp: "https://chess-game-parv.herokuapp.com/",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
+  {
+    id: 3,
+    title: "Music School App",
+    date: "Septmember 2024 - October 2024",
+    description:
+      "MUSICSCHOOLAPP is a dynamic educational platform built with Next.js that allows users to explore and learn various music courses. As my first project using Next.js, this app showcases responsive design, interactive lessons, and optimized performance through server-side rendering and static site generation. The tech stack includes React for a modern UI, Tailwind CSS for styling, and a Node.js backend with MongoDB for scalable data management. This project was a key part of my learning journey, combining my passion for both music and web development.",
+    image: "",
+    tags: ["Next Js"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/Music-Academy",
     // member: [
     //   {
     //     name: "Parv Mehta",
