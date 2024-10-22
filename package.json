@@ -6,6 +6,7 @@
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@mediapipe/tasks-vision": "^0.10.17",
     "@mui/icons-material": "^5.16.7",
     "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "^5.16.7",
@@ -24,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
     "react-tilt": "^1.0.2",
+    "react-toastify": "^10.0.6",
     "react-vertical-timeline-component": "^3.6.0",
     "styled-components": "^6.1.12",
     "three": "^0.167.1",
@@ -40,7 +42,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "warn"
+    }
   },
   "browserslist": {
     "production": [

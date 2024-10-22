@@ -26,6 +26,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
 `;
+
 const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
@@ -103,7 +104,6 @@ const MobileIcon = styled.div`
 `;
 
 const MobileMenu = styled.ul`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -116,10 +116,8 @@ const MobileMenu = styled.ul`
   position: absolute;
   top: 80px;
   right: 0;
-
   transition: all 0.6s ease-in-out;
-  transform: ${({ isOpen }) =>
-    isOpen ? "translateY(0)" : "translateY(-100%)"};
+  transform: ${({ isOpen }) => (isOpen ? "translateY(0)" : "translateY(-100%)")};
   border-radius: 0 0 20px 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
@@ -129,15 +127,18 @@ const MobileMenu = styled.ul`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
+
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">Mehta Parv</NavLogo>
 
+        {/* Mobile Icon for smaller screens */}
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
 
+        {/* Desktop Nav Items */}
         <NavItems>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
@@ -146,26 +147,17 @@ const Navbar = () => {
           <NavLink href="#Education">Education</NavLink>
         </NavItems>
 
+        {/* Mobile Menu for smaller screens */}
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
-              About
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
-            </NavLink>
+            <NavLink href="#About">About</NavLink>
+            <NavLink href="#Skills">Skills</NavLink>
+            <NavLink href="#Experience">Experience</NavLink>
+            <NavLink href="#Projects">Projects</NavLink>
+            <NavLink href="#Education">Education</NavLink>
             <GithubButton
               href={Bio.github}
-              target="_Blank"
+              target="_blank"
               style={{
                 background: theme.primary,
                 color: theme.text_primary,
@@ -176,8 +168,9 @@ const Navbar = () => {
           </MobileMenu>
         )}
 
+        {/* GitHub button for desktop */}
         <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
+          <GithubButton href={Bio.github} target="_blank">
             Github Profile
           </GithubButton>
         </ButtonContainer>

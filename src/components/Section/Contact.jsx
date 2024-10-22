@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; // Import toastify CSS
 
 const Container = styled.div`
   display: flex;
@@ -61,6 +63,7 @@ const ContactInput = styled.input`
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
+  z-index: 1;
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
@@ -74,6 +77,7 @@ const ContactInputMessage = styled.textarea`
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
+  z-index: 1;
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
@@ -88,6 +92,14 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")}; /* Conditional cursor */
+  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)}; /* Adjust opacity when disabled */
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")}; /* Disable pointer events for disabled state */
+
+  &:hover {
+    background: ${({ disabled }) =>
+      disabled ? "hsla(271, 100%, 50%, 1)" : "hsla(271, 100%, 60%, 1)"};
+  }
 `;
 
 const FeedbackMessage = styled.div`
@@ -99,8 +111,7 @@ const FeedbackMessage = styled.div`
 
 const Contact = () => {
   const form = useRef();
-  const [messageStatus, setMessageStatus] = useState(""); // Manage feedback state
-  const [isLoading, setIsLoading] = useState(false); // State for loading indicator
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -115,12 +126,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setMessageStatus("success");
+          toast.success("I will contact you soon!"); // Show success toast
           form.current.reset();
           setIsLoading(false); // Stop loading
         },
         (error) => {
-          setMessageStatus("error");
+          toast.error("Failed to send the message. Please try again!"); // Show error toast
           setIsLoading(false); // Stop loading
         }
       );
@@ -166,17 +177,18 @@ const Contact = () => {
           />
         </ContactForm>
 
-        {/* Conditionally render feedback message */}
-        {messageStatus === "success" && (
-          <FeedbackMessage success={true}>
-            Message sent successfully!
-          </FeedbackMessage>
-        )}
-        {messageStatus === "error" && (
-          <FeedbackMessage success={false}>
-            Failed to send the message. Please try again.
-          </FeedbackMessage>
-        )}
+        {/* Toast container to render toasts */}
+        <ToastContainer
+          position="top-center"
+          autoClose={5000} // Auto close after 5 seconds
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </Wrapper>
     </Container>
   );

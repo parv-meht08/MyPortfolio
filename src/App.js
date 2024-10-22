@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/utils/Themes";
 import Navbar from "./components/Navbar";
