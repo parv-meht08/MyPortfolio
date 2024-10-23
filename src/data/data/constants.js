@@ -234,4 +234,22 @@ export const projects = [
     //     github: "https://github.com/parv-meht08",
     //   },
   },
+  {
+    id: 4,
+    title: "Mystery Message",
+    date: "October 2024 - November 2024",
+    description:
+      "Developed an anonymous feedback website using Next.js named Mystery Message, incorporating AI integration to help users generate feedback suggestions and providing a seamless experience for anonymous submissions. Implemented Email OTP verification with EmailJS for secure authentication, ensuring privacy and data protection. The project features a user-friendly feedback form with essential functionalities, enhancing usability and security for a smooth user experience.",
+    image: "",
+    tags: ["Next Js"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/mystryMsg.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
 ];
