@@ -252,4 +252,22 @@ export const projects = [
     //     github: "https://github.com/parv-meht08",
     //   },
   },
+  {
+    id: 5,
+    title: "MyChatAI",
+    date: "January 2025 - January 2025",
+    description:
+      "A full-stack AI-integrated chatbot built with the MERN stack, featuring real-time chatting, dynamic code generation using prompts, and live code execution directly on the platform. Leveraged Socket.IO, Gemini API, prompt engineering, web container, iframe, and Tailwind CSS to deliver an interactive and responsive user experience.",
+    image: "",
+    tags: ["MERN"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/MyChatAi.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
 ];
