@@ -270,4 +270,22 @@ export const projects = [
     //     github: "https://github.com/parv-meht08",
     //   },
   },
+  {
+    id: 6,
+    title: "SCATCH",
+    date: "January 2025 - Febuary 2025",
+    description:
+      "SCATCH is a full-stack bag shop application built with Node.js, Express.js, and MongoDB. It features user authentication with JWT and bcrypt, an admin panel for managing products, and dynamic cart management. The app also includes secure session handling with cookie-parser and flash messages for real-time notifications. The frontend is rendered using EJS, offering an interactive and responsive shopping experience.",
+    image: "",
+    tags: ["Node Js with EJS"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/Scatch.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
 ];
