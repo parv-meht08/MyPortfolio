@@ -253,7 +253,7 @@ const HeroSection = () => {
               </motion.div>
               <Substitle>{Bio.description}</Substitle>
               <ResumeButton
-                href="https://drive.google.com/file/d/1yBItRjkLNCHpuhRUyink0eJ0HiBhcVDI/view"
+                href="https://drive.google.com/file/d/1uqmfoiYK2MST7dRqfm53EHtCvEPcQAsK/view"
                 target="_Blank"
               >
                 Check Resume

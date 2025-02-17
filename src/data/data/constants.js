@@ -288,4 +288,22 @@ export const projects = [
     //     github: "https://github.com/parv-meht08",
     //   },
   },
+  {
+    id: 7,
+    title: "REFOKUS CLONE",
+    date: "Febuary 2025 - Febuary 2025",
+    description:
+      "I recently built a frontend project using React for the UI and Framer Motion for animations. This project was a great learning experience, helping me explore smooth UI interactions and animation techniques. Working with Framer Motion allowed me to understand how to create fluid transitions, page animations, and engaging user experiences. You can check out the complete code on GitHub here: [GitHub Link]. If you have any feedback or suggestions, feel free to share! Looking forward to learning more and improving my frontend skills. 🚀",
+    image: "",
+    tags: ["React Js, Framer Motion"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/Refokus.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
 ];
