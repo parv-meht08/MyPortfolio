@@ -306,4 +306,40 @@ export const projects = [
     //     github: "https://github.com/parv-meht08",
     //   },
   },
+  {
+    id: 8,
+    title: "AI POWERED CODE REVIEWER",
+    date: "Febuary 2025 - Febuary 2025",
+    description:
+      "I’m excited to share my latest mini project, AI-Powered Code Reviewer! 🚀 This is a MERN-based application that analyzes your code and provides feedback on whether it is Good, Bad, or Average, along with suggested improvements and even optimized code. I integrated Google Gemini API to enhance the accuracy and effectiveness of the reviews, making it a valuable tool for developers looking to refine their code quality.",
+    image: "",
+    tags: ["MERN"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/Code-Reviewer.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
+  {
+    id: 9,
+    title: "LINKTREE CLONE",
+    date: "Febuary 2025 - Febuary 2025",
+    description:
+      "Developed a Linktree Clone using Next.js that allows users to create and manage a personalized landing page for sharing multiple links. Implemented user authentication using NextAuth.js or Firebase for secure login and registration. Enabled users to add, edit, and organize their links dynamically with a clean and responsive UI. Integrated customizable themes to enhance personalization. Optimized the application for SEO, performance, and mobile responsiveness using Next.js and Tailwind CSS. Utilized MongoDB for storing user data and links (if implemented), ensuring efficient data management.",
+    image: "",
+    tags: ["MERN"],
+    category: "web app",
+    github: "https://github.com/parv-meht08/linktree.git",
+    // member: [
+    //   {
+    //     name: "Parv Mehta",
+    //     img: "https://avatars.githubusercontent.com/u/174143861?v=4",
+    //     linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+    //     github: "https://github.com/parv-meht08",
+    //   },
+  },
 ];
