@@ -1,13 +1,17 @@
 export const Bio = {
   name: "Parv Mehta",
-  roles: ["Full Stack Developer", "Programmer"],
+  roles: [
+    "Full Stack Developer",
+    "Web Developer",
+    "UI/UX Designer",
+    "Backend Developer",
+  ],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
-  github: "https://github.com/parv-meht08",
-  // resume:
-  //   "https://drive.google.com/file/d/1M-UXXyUWluhArwyu71WapFrp__iJGHz7/view?usp=drive_link",
-  // Go to HeroSection for update resume
-  linkedin: "https://www.linkedin.com/in/parv-mehta-134889275/",
+  github: "https://github.com/parvm050",
+  resume:
+    "https://drive.google.com/file/d/12h0p7RxfwTIJNVgixaGG2vRldm-BQpbT/view",
+  linkedin: "https://www.linkedin.com/in/parv-mehta-0b0b0b0b0b/",
   twitter: "https://x.com/i/flow/login?redirect_after_login=%2FParvMehta1008",
   insta: "https://www.instagram.com/parv_mehta10/",
   facebook: "https://www.facebook.com/parv.mehta.100",
@@ -117,13 +121,20 @@ export const skills = [
 export const experience = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/v2/C4E0BAQHtYmHxUs9B_g/company-logo_200_200/company-logo_200_200/0/1630616931234/sparks_to_ideas_logo?e=1736380800&v=beta&t=o1NEMpyF6x8Js9Lat0Yf5ZsyBWYpURc5h6TygMW4RDA",
-    role: "React Js Intern",
+    img: "sparks_to_ideas_logo.jpeg",
+    role: "Full Stack Developer",
     company: "Sparks to Ideas",
-    date: "May 2024 - June 2024",
-    desc: "My internship journey at Sparks To Ideas was a transformative experience, where I delved into React JS technology for the first time. Working on the frontend for an event management site, I honed my skills with Vite and contributed significantly to the project. The hands-on experience not only enhanced your technical abilities but also gave me a deeper understanding of real-world software development, setting a solid foundation for your future career in software engineering.",
-    skills: ["ReactJS", "NodeJs", "Material UI", "HTML", "CSS", "JavaScript"],
-    doc: "https://media.licdn.com/dms/image/v2/D4D2DAQHHXGfCFMe2hw/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1723558187174?e=1725174000&v=beta&t=nKleegYW7C_DA9BcDz_-zLf3ifNLd1pHSo1NyVqmkEs",
+    date: "Jan 2024 - Present",
+    desc: "I am a Full Stack Developer at Sparks to Ideas. I am responsible for developing and maintaining web applications using React, Node.js, and MongoDB.",
+    skills: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
   },
 ];
 
@@ -178,7 +189,7 @@ export const projects = [
     //   },
     //   {
     //     name: "Ayush Ka Patel",
-    //     image: "https://media.licdn.com/dms/image/v2/D4D03AQG0-VUs5DlOOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712384237352?e=1730332800&v=beta&t=OiHZq-NyKMw5D3-lHhQxFYq0wLt6PQB045tCZOGjEL4",
+    //     image: "https://media.licdn.com/dms/image/v2/D4D03AQG0-VUs5DlOOw/profile-displayphoto-shrink_800_800/0/1712384237352?e=1730332800&v=beta&t=OiHZq-NyKMw5D3-lHhQxFYq0wLt6PQB045tCZOGjEL4",
     //     linkedin: "https://www.linkedin.com/in/ayush-kapatel-b983942ab/",
     //     // github: "https://github.com/upasana0710",
     //   },
@@ -311,7 +322,7 @@ export const projects = [
     title: "AI POWERED CODE REVIEWER",
     date: "Febuary 2025 - Febuary 2025",
     description:
-      "I’m excited to share my latest mini project, AI-Powered Code Reviewer! 🚀 This is a MERN-based application that analyzes your code and provides feedback on whether it is Good, Bad, or Average, along with suggested improvements and even optimized code. I integrated Google Gemini API to enhance the accuracy and effectiveness of the reviews, making it a valuable tool for developers looking to refine their code quality.",
+      "I'm excited to share my latest mini project, AI-Powered Code Reviewer! 🚀 This is a MERN-based application that analyzes your code and provides feedback on whether it is Good, Bad, or Average, along with suggested improvements and even optimized code. I integrated Google Gemini API to enhance the accuracy and effectiveness of the reviews, making it a valuable tool for developers looking to refine their code quality.",
     image: "",
     tags: ["MERN"],
     category: "web app",
