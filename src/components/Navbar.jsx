@@ -34,6 +34,7 @@ const NavLogo = styled(LinkR)`
   font-size: 18px;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 `;
 
 const NavItems = styled.ul`
@@ -128,10 +129,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
 
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">Mehta Parv</NavLogo>
+        <NavLogo href="#about" onClick={(e) => handleNavClick(e, "about")}>Mehta Parv</NavLogo>
 
         {/* Mobile Icon for smaller screens */}
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
@@ -140,21 +150,23 @@ const Navbar = () => {
 
         {/* Desktop Nav Items */}
         <NavItems>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#about" onClick={(e) => handleNavClick(e, "about")}>About</NavLink>
+          <NavLink href="#skills" onClick={(e) => handleNavClick(e, "skills")}>Skills</NavLink>
+          <NavLink href="#experience" onClick={(e) => handleNavClick(e, "experience")}>Experience</NavLink>
+          <NavLink href="#projects" onClick={(e) => handleNavClick(e, "projects")}>Projects</NavLink>
+          <NavLink href="#education" onClick={(e) => handleNavClick(e, "education")}>Education</NavLink>
+          <NavLink href="#contact" onClick={(e) => handleNavClick(e, "contact")}>Contact</NavLink>
         </NavItems>
 
         {/* Mobile Menu for smaller screens */}
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink href="#About">About</NavLink>
-            <NavLink href="#Skills">Skills</NavLink>
-            <NavLink href="#Experience">Experience</NavLink>
-            <NavLink href="#Projects">Projects</NavLink>
-            <NavLink href="#Education">Education</NavLink>
+            <NavLink href="#about" onClick={(e) => handleNavClick(e, "about")}>About</NavLink>
+            <NavLink href="#skills" onClick={(e) => handleNavClick(e, "skills")}>Skills</NavLink>
+            <NavLink href="#experience" onClick={(e) => handleNavClick(e, "experience")}>Experience</NavLink>
+            <NavLink href="#projects" onClick={(e) => handleNavClick(e, "projects")}>Projects</NavLink>
+            <NavLink href="#education" onClick={(e) => handleNavClick(e, "education")}>Education</NavLink>
+            <NavLink href="#contact" onClick={(e) => handleNavClick(e, "contact")}>Contact</NavLink>
             <GithubButton
               href={Bio.github}
               target="_blank"

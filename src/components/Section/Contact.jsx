@@ -1,14 +1,16 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; // Import toastify CSS
+import { motion } from "framer-motion";
+import { slideAnimation } from "../../utils/utils/motion";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
 `;
 
 const Wrapper = styled.div`
@@ -26,6 +28,12 @@ const Title = styled.div`
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    font-size: 40px;
+  }
 `;
 
 const Desc = styled.div`
@@ -34,9 +42,15 @@ const Desc = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 40px;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
 `;
 
-const ContactForm = styled.form`
+const ContactCard = styled(motion.div)`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -46,6 +60,7 @@ const ContactForm = styled.form`
   border-radius: 12px;
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
   gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 `;
 
 const ContactTitle = styled.div`
@@ -55,140 +70,68 @@ const ContactTitle = styled.div`
   color: ${({ theme }) => theme.text_primary};
 `;
 
-const ContactInput = styled.input`
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  z-index: 1;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ContactInputMessage = styled.textarea`
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  z-index: 1;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ContactButton = styled.input`
-  width: 100%;
+const EmailLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 12px;
   background: hsla(271, 100%, 50%, 1);
   padding: 13px 16px;
   border-radius: 12px;
-  border: none;
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")}; /* Conditional cursor */
-  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)}; /* Adjust opacity when disabled */
-  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")}; /* Disable pointer events for disabled state */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
 
   &:hover {
-    background: ${({ disabled }) =>
-      disabled ? "hsla(271, 100%, 50%, 1)" : "hsla(271, 100%, 60%, 1)"};
+    background: hsla(271, 100%, 60%, 1);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
   }
 `;
 
-const FeedbackMessage = styled.div`
-  font-size: 18px;
-  font-weight: 600;
-  color: ${({ success, theme }) => (success ? theme.primary : "red")};
-  margin-top: 10px;
-`;
-
 const Contact = () => {
-  const form = useRef();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e) => {
+  const handleEmailClick = (e) => {
     e.preventDefault();
-    setIsLoading(true); // Start loading indicator
-
-    emailjs
-      .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
-      )
-      .then(
-        (result) => {
-          toast.success("I will contact you soon!"); // Show success toast
-          form.current.reset();
-          setIsLoading(false); // Stop loading
-        },
-        (error) => {
-          toast.error("Failed to send the message. Please try again!"); // Show error toast
-          setIsLoading(false); // Stop loading
-        }
-      );
+    const email = "parvm050@gmail.com";
+    const subject = "Contact from Portfolio";
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    window.open(mailtoLink, "_blank");
   };
 
   return (
-    <Container id="Education">
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactCard
+          {...slideAnimation("up")}
+        >
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput
-            type="email"
-            placeholder="Your Email"
-            name="from_email"
-            required
-          />
-          <ContactInput
-            type="text"
-            placeholder="Your Name"
-            name="from_name"
-            required
-          />
-          <ContactInput
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            required
-          />
-          <ContactInputMessage
-            placeholder="Message"
-            name="message"
-            rows={4}
-            required
-          />
-          <ContactButton
-            type="submit"
-            value={isLoading ? "Sending..." : "Send"}
-            disabled={isLoading}
-          />
-        </ContactForm>
-
-        {/* Toast container to render toasts */}
-        <ToastContainer
-          position="top-center"
-          autoClose={5000} // Auto close after 5 seconds
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
+          <EmailLink 
+            href="#"
+            onClick={handleEmailClick}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+            parvm050@gmail.com
+          </EmailLink>
+        </ContactCard>
       </Wrapper>
     </Container>
   );

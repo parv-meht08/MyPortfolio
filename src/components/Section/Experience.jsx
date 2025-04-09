@@ -52,7 +52,7 @@ const Desc = styled.div`
 
 const Experience = () => {
   return (
-    <Container id="Education">
+    <Container id="experience">
       <Wrapper>
         <Title>Experience</Title>
         <Desc

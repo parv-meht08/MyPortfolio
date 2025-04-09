@@ -1,39 +1,44 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { MeshStandardMaterial, Mesh, SphereGeometry } from "three";
+import { MeshStandardMaterial } from "three";
 
 // Placeholder component for debugging
 const PlaceholderEarth = () => (
-  <Mesh>
-    <SphereGeometry args={[1, 32, 32]} />
-    <MeshStandardMaterial
-      color="lightgreen"
-      emissive="white"
-      emissiveIntensity={0.5}
+  <mesh>
+    <sphereGeometry args={[1, 32, 32]} />
+    <meshStandardMaterial
+      color="#90EE90"
+      emissive="#ffffff"
+      emissiveIntensity={0.2}
+      metalness={0.1}
+      roughness={0.7}
     />
-  </Mesh>
+  </mesh>
 );
 
 const Earth = () => {
-  const { scene, error } = useGLTF("/planet/planet/scene.gltf");
-
-  // Check for loading errors
-  if (error) {
+  const [error, setError] = useState(null);
+  const { scene } = useGLTF("/planet/planet/scene.gltf", undefined, (error) => {
     console.error("Error loading GLTF model:", error);
+    setError(error);
+  });
+
+  // If there's an error, return the placeholder
+  if (error) {
     return <PlaceholderEarth />;
   }
-
-  // Log to ensure the model is loaded
-  console.log("GLTF Model Loaded:", scene);
 
   // Apply a color mix to the Earth model
   scene.traverse((child) => {
     if (child.isMesh) {
+      // Create a new material that doesn't depend on textures
       child.material = new MeshStandardMaterial({
-        color: "lightgreen", // Base color
-        emissive: "white", // Emissive color to give a glowing white effect
-        emissiveIntensity: 0.5, // Adjust the intensity of the white glow
+        color: "#90EE90",
+        emissive: "#ffffff",
+        emissiveIntensity: 0.2,
+        metalness: 0.1,
+        roughness: 0.7,
       });
     }
   });
@@ -52,27 +57,30 @@ const EarthCanvas = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000); // Simulate loading
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Inline style for loading indicator
-  const loadingStyle = {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    fontSize: "24px",
-    color: "#ffffff",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    padding: "10px",
-    borderRadius: "5px",
-    zIndex: 1000, // Ensure it's above everything
-  };
-
   return (
     <>
-      {loading && <div style={loadingStyle}>Loading...</div>}
+      {loading && (
+        <div
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "24px",
+            color: "#ffffff",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            padding: "10px",
+            borderRadius: "5px",
+            zIndex: 1000,
+          }}
+        >
+          Loading...
+        </div>
+      )}
       <Canvas
         shadows
         frameloop="demand"
